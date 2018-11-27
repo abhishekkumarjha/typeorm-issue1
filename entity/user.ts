@@ -4,7 +4,7 @@ import {
   ManyToOne,
   OneToOne,
   BaseEntity,
-  Entity
+  Entity,
 } from "typeorm";
 import { UserGroup } from "./user-group";
 import { Profile } from "./profile";
@@ -26,13 +26,16 @@ export class User extends BaseEntity {
   )
   group?: UserGroup;
 
+  //The profile is optional as we may have users without profile info
   @OneToOne(type => Profile, profile => profile.user)
   profile?: Profile;
 
   constructor(
     name: string,
+    profile?: Profile
   ) {
     super();
     this.name = name;
+    this.profile = profile
   }
 }
