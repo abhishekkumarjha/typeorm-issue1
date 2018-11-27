@@ -5,10 +5,10 @@ import {
   BaseEntity,
   Entity
 } from "typeorm";
-import { Equipment } from "./equipment";
+import { User } from "./user";
 
 @Entity()
-export class EquipmentGroup extends BaseEntity {
+export class UserGroup extends BaseEntity {
   @PrimaryGeneratedColumn()
   id!: number;
 
@@ -18,17 +18,17 @@ export class EquipmentGroup extends BaseEntity {
   })
   name: string;
 
-  @OneToMany(type => Equipment, equipment => equipment.equipmentGroup, {
+  @OneToMany(type => User, user => user.group, {
     eager: true
   })
-  equipments: Equipment[];
+  users: User[];
 
   constructor(
     name: string,
-    equipments: Equipment[]
+    users: User[]
   ) {
     super();
     this.name = name;
-    this.equipments = equipments;
+    this.users = users;
   }
 }

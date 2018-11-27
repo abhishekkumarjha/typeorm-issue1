@@ -2,11 +2,11 @@ import "source-map-support/register";
 import "reflect-metadata";
 
 import { ConnectionOptions, createConnection } from "typeorm";
-import { CleaningMethod } from "./entity/cleaning-method";
-import { Equipment } from "./entity/equipment";
-import { EquipmentGroup } from "./entity/equipment-group";
+import { Profile } from "./entity/profile";
+import { User } from "./entity/user";
+import { UserGroup } from "./entity/user-group";
 
-const entities = [ Equipment, EquipmentGroup, CleaningMethod];
+const entities = [ User, UserGroup, Profile];
 
 async function main() {
   const options: ConnectionOptions = {
@@ -19,9 +19,11 @@ async function main() {
   };
   await createConnection(options);
 
-  const equipment = await new Equipment("e1").save();
+  //This works
+  const user = await new User("Abhi").save();
 
-  const group = await new EquipmentGroup("groupx", [equipment]).save();
+  //This fails
+  const group = await new UserGroup("groupx", [user]).save();
 }
 
 main().catch(e => console.error("Failed!\n", e));
