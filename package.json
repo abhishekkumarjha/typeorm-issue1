@@ -14,5 +14,9 @@
     "sqlite3": "^4.0.4",
     "typeorm": "^0.2.9",
     "uuid": "^3.3.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js"
   }
 }
