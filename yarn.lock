@@ -1229,10 +1229,10 @@ typed-function@1.1.0:
   resolved "https://registry.yarnpkg.com/typed-function/-/typed-function-1.1.0.tgz#ea149706e0fb42aca1791c053a6d94ccd6c4fdcb"
   integrity sha512-TuQzwiT4DDg19beHam3E66oRXhyqlyfgjHB/5fcvsRXbfmWPJfto9B4a0TBdTrQAPGlGmXh/k7iUI+WsObgORA==
 
-typeorm@^0.2.9:
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/typeorm/-/typeorm-0.2.9.tgz#b21a55f4c7ae398c104911e298485c232bcceefc"
-  integrity sha512-guvrl5TH85N0y1AdPRuCrs2OTRQqs1wVgM+GrMfaiAGF8X+EoHDTUg2SPmcGtoAOSg7CnrCPxxwKOH4VvBr5Tw==
+typeorm@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/typeorm/-/typeorm-0.2.0.tgz#234745ca24de7d1e1b6ba8b32676f597cd8931e5"
+  integrity sha512-Z2qOSm+ZU1aqqWT3W053Uzto6YunT+UrzNOHws34pGFZZ8uAYa1TWCkDjZ5gRywcbqAc7tW/Q5IBu6Ce1FCEnQ==
   dependencies:
     app-root-path "^2.0.1"
     buffer "^5.1.0"
